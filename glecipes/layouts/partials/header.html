@@ -1,0 +1,19 @@
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{ hugo.Generator }}
+   <link rel="stylesheet" href="{{ "css/bootstrap.min.css" | absURL }}">
+    <!-- Bootstrap CSS -->
+    <link href="{{ "css/bootstrap.min.css" | absURL }}" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="{{ "bootstrap.bundle.min.js" | absURL }}" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+    {{ $title := print .Title " | " .Site.Title }}
+  	{{ if .IsHome }}
+   	  {{ $title = .Site.Title }}
+  	{{ end }}
+  <title>{{ $title }}</title>
+</head>
